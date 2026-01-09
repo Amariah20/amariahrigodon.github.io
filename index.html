@@ -32,17 +32,66 @@
     .contact a { display: inline-block; margin-right: 15px; padding: 10px 18px; background: #1a73e8; color: #fff; border-radius: 6px; font-weight: bold; transition: 0.3s; margin-bottom: 10px; }
     .contact a:hover { background: #155ab6; }
 
-    .cert-category { margin-bottom: 15px; }
-.cert-category strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: #1a73e8; }
-.cert-badge {
-  display: inline-block;
-  background: #e0f0ff;
-  color: #1a73e8;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  margin: 3px 5px 3px 0;
-}
+   #certifications h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+  }
+
+  .cert-category {
+    margin-bottom: 40px;
+  }
+
+  .cert-category strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #1a73e8;
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .cert-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .cert-card img {
+    max-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .cert-card p {
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    color: #222;
+  }
+
+  .cert-card span {
+    font-size: 0.85em;
+    color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .cert-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  }
 
 
 
@@ -130,7 +179,7 @@
     </div>
   </div>
 
-   <div class="cert-category">
+  <div class="cert-category">
     <strong>Leadership & Business</strong>
     <div class="cert-grid">
       <div class="cert-card">
@@ -148,20 +197,19 @@
         <p>Leading People & Teams</p>
         <span>University of Michigan</span>
       </div>
-        <div class="cert-card">
+      <div class="cert-card">
         <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
         <p>Managing Talent</p>
         <span>University of Michigan</span>
       </div>
-        <div class="cert-card">
+      <div class="cert-card">
         <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
         <p>Inspiring & Motivating Individuals</p>
         <span>University of Michigan</span>
-      </div>      
+      </div>
     </div>
   </div>
 
-  
   <div class="cert-category">
     <strong>IT & Security</strong>
     <div class="cert-grid">
@@ -176,14 +224,14 @@
         <span>IBM</span>
       </div>
       <div class="cert-card">
-        <img src="assets/media/michigan_logo.png" alt="Microsoft Logo" />
+        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
         <p>Foundational C#</p>
         <span>Microsoft</span>
       </div>
     </div>
   </div>
-  
 </section>
+     
 
 
 <section>
