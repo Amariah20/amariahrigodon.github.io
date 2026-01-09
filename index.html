@@ -70,10 +70,13 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   }
 
-  .cert-card img {
-    max-height: 40px;
-    margin-bottom: 10px;
-  }
+ .cert-card img {
+  width: 60px;       /* fixed square size */
+  height: 60px;
+  object-fit: contain; /* scales image to fit while keeping aspect ratio */
+  margin-bottom: 10px;
+}
+
 
   .cert-card p {
     font-weight: bold;
