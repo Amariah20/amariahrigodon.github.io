@@ -90,6 +90,14 @@
     color: #555;
   }
 
+  /* BCS Professional Membership logo */
+.cert-card.bcs-card img {
+  width: 80px;       /* slightly bigger so it’s clear */
+  height: auto;      /* keep full vertical aspect ratio */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
   @media (max-width: 600px) {
     .cert-grid {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -123,14 +131,15 @@
   <h2>Education</h2>
   <div class="card">
     
-      
-        <img src="assets/media/DBS_logo.jfif" alt="Dublin Business School Logo" style="height:30px; vertical-align:middle; margin-right:10px;">
+      <div style="margin-bottom: 15px;">
+        <img src="assets/media/DBS_logo.jfif" alt="Dublin Business School Logo" style="height:60px; vertical-align:middle; margin-right:10px;">
         <strong>MBA in Cloud Computing</strong> – Dublin Business School (2026–2027)
-        <br>
+      </div>
       
-        <img src="assets/media/aston_logo.png" alt="Aston University Logo" style="height:30px; vertical-align:middle; margin-right:10px;">
+      <div>
+        <img src="assets/media/aston_logo.png" alt="Aston University Logo" style="height:60px; vertical-align:middle; margin-right:10px;">
         <strong>BSc Computer Science with Business, First Class Honours</strong> – Aston University (2021–2024)
-      
+      </div>
     
   </div>
 </section>
@@ -143,7 +152,7 @@
   <div class="cert-category">
   <strong>Professional Memberships</strong>
   <div class="cert-grid">
-    <div class="cert-card">
+    <div class="cert-card bcs-card">
       <img src="assets/media/bcs_logo.jfif" alt="BCS Logo" />
       <p>Professional Member</p>
       <span>British Computer Society (BCS)</span>
