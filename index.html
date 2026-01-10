@@ -26,6 +26,11 @@
   gap: 20px;
 }
 
+.header-text {
+  display: flex;
+  flex-direction: column; /* stacks name and location vertically */
+}
+
 .profile-pic {
   width: 130px;
   height: 130px;
@@ -258,11 +263,13 @@ details li {
 <header class="site-header">
   <div class="header-content">
     <img src="assets/media/myself.png" alt="Amariah Rigodon" class="profile-pic">
-    <h1>Amariah Rigodon, MBCS</h1>
-    <p style="font-size:1em; color:#555;">Dublin, Ireland</p>
-
+    <div class="header-text">
+      <h1>Amariah Rigodon, MBCS</h1>
+      <p style="font-size:1em; color:#555;">Dublin, Ireland</p>
+    </div>
   </div>
 </header>
+
 
 
 <section>
@@ -556,9 +563,5 @@ details li {
     </div>
   </div>
 </section>
-
-
-
-
 </body>
 </html>
