@@ -98,6 +98,33 @@
   padding-top: 20px;
 }
 
+details {
+  margin-top: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2563eb;
+  list-style: none;
+}
+
+summary::marker {
+  display: none;
+}
+
+details ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+details li {
+  margin-bottom: 6px;
+}
+
+
+
+
   @media (max-width: 600px) {
     .cert-grid {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -116,6 +143,7 @@
 <body>
 
 <header>
+  <img src="assets/media/myself.png">
   <h1>Amariah Rigodon, MBCS</h1>
 </header>
 
@@ -267,18 +295,73 @@
 </section>
      
 
-
 <section>
   <h2>Selected Experience</h2>
+
+  <!-- Senior Analyst Programmer -->
   <div class="card">
     <h3>Senior Analyst Programmer | Department of ICT, Seychelles (2025)</h3>
-    <p>Delivered fullstack government digital systems for 10,000+ users, implemented REST APIs and Agile workflows, and increased citizen engagement by 60%.</p>
+    <p>
+      Delivered large-scale government systems while acting as a bridge between
+      policy stakeholders and technical teams in a national digital transformation environment.
+    </p>
+
+    <details>
+      <summary>View details</summary>
+      <ul>
+        <li>Built and deployed full-stack government applications serving 10,000+ users.</li>
+        <li>Led requirements analysis with non-technical stakeholders, translating needs into technical specifications.</li>
+        <li>Re-engineered workflows to improve efficiency and system adoption across ministries.</li>
+        <li>Ensured compliance with ISO 27001 and national data protection legislation.</li>
+        <li>Supported Agile delivery, UAT coordination, and cross-team collaboration.</li>
+        <li>Trained and onboarded end-users, accelerating adoption and reducing post-launch support.</li>
+      </ul>
+    </details>
   </div>
+
+  <!-- Technology Consultant -->
   <div class="card">
-    <h3>Technology Consultant | ACJ Konsult, Seychelles (2025)</h3>
-    <p>Developed e-commerce platform, integrated payment gateway, and improved public sector digital services, reducing support inquiries by 40%.</p>
+    <h3>Technology Consultant | ACJ Konsult (Self-Employed), Seychelles (2025)</h3>
+    <p>
+      Worked with public and private sector clients to translate business problems
+      into practical digital solutions across e-commerce, government systems, and compliance-critical platforms.
+    </p>
+
+    <details>
+      <summary>View details</summary>
+      <ul>
+        <li>Led end-to-end delivery of digital solutions from requirements gathering to implementation.</li>
+        <li>Launched and optimised an e-commerce platform, driving revenue growth and improved customer experience.</li>
+        <li>Designed and delivered public sector portals, reducing support demand through self-service.</li>
+        <li>Advised on data protection, security, and regulatory compliance for high-risk systems.</li>
+        <li>Identified business logic and process gaps, escalating and resolving operational risks.</li>
+      </ul>
+    </details>
   </div>
+
+  <!-- Amazon -->
+  <div class="card">
+    <h3>Operations Intern (Capacity Planning) | Amazon, United Kingdom (2023)</h3>
+    <p>
+      Worked in a data-driven operations environment focused on process optimisation,
+      decision frameworks, and cross-functional coordination.
+    </p>
+
+    <details>
+      <summary>View details</summary>
+      <ul>
+        <li>Led a process improvement initiative reducing operational workload by 40%.</li>
+        <li>Designed KPI-based decision criteria improving autonomy and consistency across teams.</li>
+        <li>Translated data insights into clear operational guidance for stakeholders.</li>
+        <li>Improved documentation and cross-team alignment, reducing resolution delays.</li>
+        <li>Contributed to feature enhancement proposals aimed at automation and risk reduction.</li>
+      </ul>
+    </details>
+  </div>
+
 </section>
+
+
 
 <section id="media-features">
   <h2>Media Features</h2>
