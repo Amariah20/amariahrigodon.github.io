@@ -121,6 +121,35 @@
   padding-top: 20px;
 }
 
+
+/* --- BCS special layout --- */
+.cert-card.bcs-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 20px;
+  gap: 20px;
+}
+
+.cert-card.bcs-card img {
+  width: 140px;        /* gives logo real space */
+  height: auto;        /* never crop */
+  max-height: none;
+  object-fit: contain;
+}
+
+.cert-card.bcs-card .bcs-text p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cert-card.bcs-card .bcs-text span {
+  font-size: 0.85em;
+  color: #555;
+}
+
+
 details {
   margin-top: 10px;
 }
@@ -160,6 +189,11 @@ details li {
     @media (max-width: 600px) {
       header h1 { font-size: 2em; }
       header p { font-size: 1em; }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        }
     }
   </style>
 </head>
@@ -177,7 +211,7 @@ details li {
   <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
     <h2 style="margin:0;">About Me</h2>
     <a href="assets/media/Amariah Rigodon CV.pdf" target="_blank">
-       <img src="assets/media/downloads.png" style="height:20px; margin-right:8px;">
+       <img src="assets/media/downloads.png" style="height:20px; margin-right:8px; color: #222;">
        Download CV
     </a>
   </div>
@@ -218,10 +252,13 @@ details li {
   <strong>Professional Memberships</strong>
   <div class="cert-grid">
     <div class="cert-card bcs-card">
-      <img src="assets/media/bcs_logo.jfif" alt="BCS Logo" />
+    <div class="bcs-text">
       <p>Professional Member</p>
       <span>British Computer Society (BCS)</span>
     </div>
+    <img src="assets/media/bcs_logo.jfif" alt="BCS Logo" />
+  </div>
+
   </div>
 </div>
 
