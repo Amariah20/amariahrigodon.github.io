@@ -217,6 +217,17 @@ details li {
   text-decoration: underline;
 }
 
+@media (max-width: 600px) {
+  .contact {
+    flex-direction: column;       /* stack vertically */
+    align-items: center;          /* center horizontally */
+    text-align: center;           /* optional, aligns text inside items */
+  }
+
+  .contact-item {
+    justify-content: center;      /* center icon + text inside each item */
+  }
+}
 
 
   @media (max-width: 600px) {
