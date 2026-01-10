@@ -80,6 +80,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
+    color: #222;
+
   }
 
   .cert-card {
@@ -222,6 +224,7 @@ details li {
   text-decoration: underline;
 }
 
+
 @media (max-width: 600px) {
   .contact {
     flex-direction: column;       /* stack vertically */
@@ -351,11 +354,13 @@ details li {
   <div class="cert-category">
     <strong>Project & Agile</strong>
     <div class="cert-grid">
-      <div class="cert-card">
-        <img src="assets/media/kanban_logo.jfif" alt="ProKanban Logo" />
-        <p>Professional Flow Metrics for Scrum</p>
-        <span>ProKanban.org</span>
-      </div>
+      <a href="https://www.credly.com/badges/54309df4-3a55-43ba-a69d-7f3b2ca37b6b/linked_in_profile" target="_blank">
+        <div class="cert-card">
+          <img src="assets/media/kanban_logo.jfif" alt="ProKanban Logo" />
+          <p>Professional Flow Metrics for Scrum</p>
+          <span>ProKanban.org</span>
+        </div>
+      </a>
       <div class="cert-card">
         <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
         <p>Project Manager Engagement</p>
