@@ -175,6 +175,35 @@ details li {
 }
 
 
+.contact {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.05em;
+}
+
+.contact-item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.contact-item a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
 
 
   @media (max-width: 600px) {
@@ -477,15 +506,27 @@ details li {
 
 <section>
   <h2>Contact</h2>
-  <div class="contact" style="text-align:center; max-width:500px; margin:0 auto;">
-    <img src="assets/media/email.png"><p style="font-size:1.1em; margin-bottom:8px;"><strong>:</strong> rigodonamariah20@gmail.com</p>
-    <img src="assets/media/phone.png"><p style="font-size:1.1em; margin-bottom:20px;"><strong>:</strong> +353 (89) 941 3083</p>
-    <img src="assets/media/linkedin.png"><p style="font-size:1.1em; margin-bottom:20px;"><strong>:</strong> <a href="https://www.linkedin.com/in/amariah-rigodon/" target="_blank">Amariah Rigodon</a></p>
-    
-   
+
+  <div class="contact">
+    <div class="contact-item">
+      <img src="assets/media/email.png" alt="Email icon">
+      <span>rigodonamariah20@gmail.com</span>
+    </div>
+
+    <div class="contact-item">
+      <img src="assets/media/phone.png" alt="Phone icon">
+      <span>+353 (89) 941 3083</span>
+    </div>
+
+    <div class="contact-item">
+      <img src="assets/media/linkedin.png" alt="LinkedIn icon">
+      <a href="https://www.linkedin.com/in/amariah-rigodon/" target="_blank">
+        Amariah Rigodon
+      </a>
     </div>
   </div>
 </section>
+
 
 
 
