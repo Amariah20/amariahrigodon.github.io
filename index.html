@@ -301,6 +301,83 @@ html {
   margin-top: 50px; 
 }
 
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none; /* Hidden by default */
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    padding: 30px;
+    align-items: center;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tag {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #1a73e8;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.1);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-prev:hover, .carousel-next:hover { background: rgba(0,0,0,0.2); }
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+/* Mobile logic */
+@media (max-width: 600px) {
+    .slide-grid { grid-template-columns: 1fr; padding: 20px; }
+    .slide-img img { height: 180px; }
+}
+
 @media (max-width: 600px) {
   .contact {
     flex-direction: column;       /* stack vertically */
@@ -344,7 +421,7 @@ html {
     <div class="nav-container">
       <a href="#speaking" class="nav-link">Speaking</a>
       <a href="#media-features" class="nav-link">Media</a>
-      <a href="#contact-section" class="nav-btn">Get in Touch</a>
+      <a href="#contact-section" class="nav-link">Get in Touch</a>
     </div>
   </nav>
   <div class="header-content">
@@ -656,6 +733,66 @@ html {
 
 </section>
 
+<section id="speaking">
+    <h2>Speaking & Engagements</h2>
+    <div class="carousel-container">
+        <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+        
+        <div class="carousel-track">
+            <div class="slide active">
+                <div class="slide-grid">
+                    <div class="slide-img">
+                        <img src="assets/media/speaking1.jpg" alt="Stakeholder Engagement">
+                    </div>
+                    <div class="slide-text">
+                        <span class="tag">Technical Session</span>
+                        <h3>Stakeholder Engagement: Digital Identity & eServices</h3>
+                        <p class="meta">Department of ICT & Trade Division | 2025</p>
+                        <p>Led a technical walkthrough for national organizations transitioning to the monServis platform. Covered SeyID registration and iEpermit migration.</p>
+                        <div class="slide-links">
+                            <a href="https://www.seyid.gov.sc" target="_blank">SeyID</a>
+                            <a href="https://www.monservis.gov.sc" target="_blank">monServis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-grid">
+                    <div class="slide-img">
+                        <img src="assets/media/speaking2.jpg" alt="SITE Talk">
+                    </div>
+                    <div class="slide-text">
+                        <span class="tag">Talk</span>
+                        <h3>Technology as a Driver of Productivity</h3>
+                        <p class="meta">SITE Productivity Week | 2025</p>
+                        <p>Explored how AI and automation are reshaping workspaces, focusing on workforce readiness and ethical considerations.</p>
+                        <a href="link-to-slides.pdf" class="btn-link">View Presentation Slides →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-grid">
+                    <div class="slide-img">
+                        <img src="assets/media/speaking3.jpg" alt="Hackathon Keynote">
+                    </div>
+                    <div class="slide-text">
+                        <span class="tag">Keynote</span>
+                        <h3>Gender Equality in Digital Transformation</h3>
+                        <p class="meta">Hackathon 2025, University of Seychelles</p>
+                        <p>Keynote on my journey as a woman in tech, advocating for merit-based representation and building inclusive digital futures.</p>
+                        <a href="link-to-slides.pdf" class="btn-link">View Presentation Slides →</a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+
 
 <section id="contact-section">
   <h2>Contact</h2>
@@ -679,5 +816,16 @@ html {
     </div>
   </div>
 </section>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function moveSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+  }
+
+</script>
 </body>
 </html>
