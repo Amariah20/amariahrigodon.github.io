@@ -20,144 +20,175 @@ const roles = [
     category: 'Professional',
     logo: 'DICT',
     name: 'Senior Analyst Programmer',
-    org: 'Department of ICT, Seychelles',
+    org: 'Department of ICT, Office of the Vice President, Seychelles',
     date: 'January 2025 – January 2026',
-    intro: 'Worked on government digital transformation, stakeholder requirements and user adoption across multiple initiatives.',
-    metric: '10,000+ users · +60% system registrations',
+    intro: 'Contributed to government digital transformation initiatives, combining business analysis, software development, stakeholder engagement and cross-functional delivery. Worked closely with government ministries and technical teams to translate business needs into practical digital solutions.',
+    metric: '7 concurrent projects · 10,000+ users · +60% registrations',
     bullets: [
-      'Contributed to approximately seven concurrent government digital projects.',
-      'Gathered stakeholder needs and translated them into requirements, workflows and user journeys.',
-      'Coordinated UAT, training and rollouts for 150+ government users.',
-      'Contributed to a 60% increase in system registrations through adoption initiatives.'
+      'Contributed to approximately seven concurrent government digital projects supporting more than 10,000 users.',
+      'Increased system registrations by 60% through organising training sessions, demonstrating digital services and identifying and resolving barriers to registration.',
+      'Gathered requirements from senior government stakeholders, translating business needs into functional requirements, workflows, user journeys and system specifications.',
+      'Designed and developed front-end and back-end functionality using C#, including creating and implementing APIs within Agile development sprints.',
+      'Analysed cross-departmental processes and designed user interfaces to improve system usability and operational workflows.',
+      'Coordinated User Acceptance Testing (UAT), training and rollout activities for more than 150 users across government ministries.',
+      'Collaborated with software development, cybersecurity, networking, data centre, policy and external stakeholder teams to support the delivery of government digital services.'
     ]
   },
+
   {
     category: 'Professional',
     logo: 'EN',
     name: 'Chief Strategist Officer',
-    org: 'Enigma Investment',
-    date: 'October – December 2024',
-    intro: 'Improved a tourism technology platform and streamlined operational and payment workflows.',
+    org: 'Enigma Investment (Pty) Ltd, Seychelles',
+    date: 'October 2024 – December 2024',
+    intro: 'Combined technology development and business strategy to improve the company’s tourism technology platform, customer experience and operational efficiency.',
     metric: '+70% transactions · −45% late payments',
     bullets: [
-      'Designed and developed a tourism technology platform using Laravel.',
-      'Automated booking processes and operational notifications.',
-      'Improved the customer journey and payment workflows.'
+      'Independently designed and developed a tourism technology platform using Laravel, contributing to a 70% increase in transactions.',
+      'Automated booking processes and improved vehicle-servicing visibility to streamline operational workflows.',
+      'Developed automated WhatsApp and email notifications to provide staff with daily rental information, improving access to operational updates.',
+      'Analysed and improved customer journeys and payment workflows, contributing to a 45% reduction in late payments.'
     ]
   },
+
   {
     category: 'Entrepreneurship',
     logo: 'ACJ',
     name: 'Founder & Technology Consultant',
-    org: 'ACJ Konsult',
+    org: 'ACJ Konsult, Seychelles',
     date: 'May 2025 – January 2026',
-    intro: 'Delivered technology consulting and practical digital solutions to government and private-sector clients.',
+    intro: 'Founded and operated a technology consulting business delivering digital transformation solutions for government and private-sector clients. Managed client engagements from requirements analysis and solution recommendations through to implementation.',
     metric: '+50% client revenue · −40% support queries',
     bullets: [
-      'Implemented a Shopify-based e-commerce solution supporting client revenue growth.',
-      'Built a government information website that reduced support enquiries.',
-      'Managed client requirements, stakeholder engagement and solution recommendations.'
+      'Developed and implemented a Shopify e-commerce platform that enabled a client to launch online sales, contributing to 50% revenue growth within two months.',
+      'Designed and developed a government information website that improved access to public information and reduced customer support queries by 40%.',
+      'Delivered digital transformation initiatives involving business requirements analysis, process improvement, technology implementation and client advisory.',
+      'Identified a significant requirements and workflow mismatch in a government tax-payment system, escalating the issue for board-level clarification before implementation to avoid proceeding with an unresolved business requirement.',
+      'Integrated CyberSource payment functionality to support secure online transactions.',
+      'Managed client relationships, gathered stakeholder requirements, developed solution recommendations and presented proposed approaches to clients.'
     ]
   },
+
   {
     category: 'Entrepreneurship',
     logo: 'AV',
     name: 'Founder',
-    org: 'ActiveVerse',
+    org: 'ActiveVerse, Seychelles',
     date: 'September 2024 – January 2026',
-    intro: 'Launched and operated an activewear e-commerce venture.',
-    metric: '300+ monthly orders · Break-even in 3 months',
+    intro: 'Founded and managed an activewear e-commerce business, developing firsthand commercial experience in business operations, customer experience, digital sales and entrepreneurship.',
+    metric: '300+ monthly orders · Break-even in 3 months · 60% repeat/referral sales',
     bullets: [
-      'Managed online sales, customer experience and business operations.',
-      '60% of sales came from repeat customers and word of mouth.'
+      'Launched and operated an activewear e-commerce business processing more than 300 orders per month.',
+      'Achieved break-even within the first three months of operations.',
+      'Generated 60% of sales through repeat customers and word-of-mouth recommendations, demonstrating customer loyalty and organic business growth.',
+      'Managed digital sales, customer experience, order fulfilment and day-to-day business operations.'
     ]
   },
+
   {
     category: 'Internships',
     logo: 'AMZ',
     name: 'Operations Intern',
     org: 'Amazon, United Kingdom',
-    date: 'July – September 2023',
-    intro: 'Analysed UK linehaul operations and recommended process improvements.',
+    date: 'July 2023 – September 2023',
+    intro: 'Worked in Amazon UK operations, analysing operational processes, identifying inefficiencies and proposing improvements to decision-making, documentation and workflow management.',
     metric: 'Graduate return offer',
     bullets: [
-      'Consulted operational teams and managers to understand decision-making and workflows.',
-      'Identified operational gaps, risks and unclear responsibilities.',
-      'Presented recommendations for processes and documentation to senior management.'
+      'Analysed UK linehaul operations to identify operational risks, process gaps and unclear responsibilities affecting existing workflows.',
+      'Consulted operational teams and delivery-station managers to understand current processes, decision-making criteria and operational challenges.',
+      'Developed recommendations for process improvements, escalation procedures, documentation and training, presenting findings to senior management.',
+      'Proposed a system feature to evaluate adjustment criteria before requests were submitted, supporting more consistent decision-making and opportunities for process automation.',
+      'Received a graduate return offer following successful completion of the internship.'
     ]
   },
+
   {
     category: 'Internships',
     logo: 'DICT',
     name: 'Analyst Programmer Intern',
-    org: 'Department of ICT',
+    org: 'Department of ICT, Office of the Vice President, Seychelles',
     date: 'November 2020 – August 2021',
-    intro: 'Supported application testing, development and user documentation.',
-    metric: 'Government application delivery',
+    intro: 'Gained practical experience in government software development, application testing, technical documentation and digital service delivery.',
+    metric: 'Government application testing & delivery',
     bullets: [
-      'Tested government applications before deployment.',
-      'Produced user guides and assisted development.'
+      'Tested government applications and identified functional issues before deployment.',
+      'Supported application development through programming, testing and technical documentation.',
+      'Created user guides to improve system understanding and support adoption among end users.'
     ]
   },
+
   {
     category: 'Part-time',
     logo: 'SJ',
     name: 'Assistant Programmer',
-    org: 'St James Exchange Hub',
-    date: 'January – March 2022',
-    intro: 'Translated trading rules into automated algorithmic functionality.',
-    metric: 'MQL5',
+    org: 'St James Exchange Hub, United Kingdom',
+    date: 'January 2022 – March 2022',
+    intro: 'Worked on algorithmic trading functionality, translating business trading rules into automated technical solutions.',
+    metric: 'Requirements translation · MQL5 automation',
     bullets: [
-      'Built automated functionality based on foreign-exchange trading requirements.'
+      'Analysed foreign-exchange trading rules and translated defined business requirements into automated functionality using MQL5.',
+      'Developed algorithmic trading functionality based on specified trading conditions and decision criteria.'
     ]
   },
+
   {
     category: 'Part-time',
     logo: 'OB',
     name: 'Retail Team Member',
-    org: 'Oliver Bonas, Dublin',
-    date: '2026',
-    intro: 'Part-time customer-facing work alongside MBA studies.',
-    metric: 'Customer experience & teamwork',
+    org: 'Oliver Bonas, Dublin, Ireland',
+    date: '2026 – Present',
+    intro: 'Working in a customer-facing retail environment alongside MBA studies, strengthening customer communication, commercial awareness and teamwork.',
+    metric: 'Customer engagement · Retail operations',
     bullets: [
-      'Contributed to customer service and day-to-day retail operations.'
+      'Support customers in a fast-paced retail environment, communicating product information and responding to customer needs.',
+      'Collaborate with colleagues to support day-to-day store operations and customer experience.'
     ]
   },
+
   {
     category: 'Leadership',
     logo: 'DBS',
-    name: 'MBA Society Vice President',
-    org: 'Dublin Business School',
-    date: '2026',
-    intro: 'Supported society events and student engagement.',
-    metric: 'Student leadership',
+    name: 'Vice President',
+    org: 'MBA Society, Dublin Business School',
+    date: 'March 2026 – August 2026',
+    intro: 'Contributed to the leadership and development of the MBA Society, supporting student engagement, event coordination and relationships with university stakeholders.',
+    metric: 'Student leadership · Events · Stakeholder engagement',
     bullets: [
-      'Collaborated with student leaders and external stakeholders on MBA community activities.'
+      'Supported the planning and delivery of society initiatives, events and networking opportunities for MBA students.',
+      'Collaborated with fellow society leaders, university representatives and external guests to support professional and academic engagement.',
+      'Contributed to society organisation, governance and leadership handover activities.'
     ]
   },
+
   {
     category: 'Leadership',
     logo: 'DBS',
     name: 'Class Representative',
-    org: 'Dublin Business School',
-    date: '2026',
-    intro: 'Represented the class and supported communication with faculty.',
-    metric: 'Student representation',
+    org: 'Dublin Business School, Ireland',
+    date: 'January 2026 – Present',
+    intro: 'Represent the MBA cohort, supporting communication and constructive engagement between students and academic stakeholders.',
+    metric: 'Student advocacy · Stakeholder communication',
     bullets: [
-      'Contributed to communication of student concerns and feedback.'
+      'Represent student perspectives and communicate feedback, concerns and suggestions to relevant academic stakeholders.',
+      'Support communication between students and faculty to promote constructive discussion and improvements to the student experience.'
     ]
   },
+
   {
     category: 'Volunteering',
     logo: '+',
     name: 'Volunteering Experience',
     org: 'Details to be added',
     date: 'Coming soon',
-    intro: 'Reserved for volunteering activities you would like to showcase.',
-    metric: 'Content placeholder',
-    bullets: ['Replace this entry when ready.']
+    intro: 'Reserved for volunteering and community initiatives.',
+    metric: 'Content to be added',
+    bullets: [
+      'Add confirmed volunteering activities, responsibilities and outcomes.'
+    ]
   }
 ];
+
+
 
 const categories = [
   'Professional',
