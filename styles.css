@@ -720,3 +720,33 @@ h3 { font-size: 17px; line-height: 1.35; }
   width: auto;
   display: block;
 }
+
+
+
+
+/* Stronger emphasis on professional achievements */
+.detail-box .impact {
+  background: linear-gradient(110deg, #fce6f0, #f2ebfc);
+  color: #982d67;
+  border-left: 4px solid #ef6294;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.7;
+  margin: 22px 0;
+}
+
+.detail-box ul li {
+  margin-bottom: 12px;
+  line-height: 1.85;
+}
+
+.detail-box h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.detail-box {
+  padding: 30px;
+}
+
