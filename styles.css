@@ -706,3 +706,17 @@ h3 { font-size: 17px; line-height: 1.35; }
   padding-top: 18px;
   font-size: 11px;
 }
+
+
+.aws-badge {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aws-badge img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
