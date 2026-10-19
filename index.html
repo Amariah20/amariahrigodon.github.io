@@ -1,922 +1,306 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amariah Rigodon | Portfolio</title>
-  <style>
-    /* --- Reset & fonts --- */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #222; background-color: #f4f4f9; }
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-   /* --- Header --- */
-.site-header {
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding: 50px 20px;
-}
-
-.header-content {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column; /* stacks name and location vertically */
-}
-
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.site-header h1 {
-  font-size: 2.6em;
-  margin: 0;
-}
-
-
-    /* --- Layout --- */
-    section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    h2 { font-size: 1.8em; margin-bottom: 20px; color: #333; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-
-    /* --- Card style --- */
-    .card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .card h3 { margin-bottom: 10px; font-size: 1.2em; color: #1a73e8; }
-    .card p, .card ul { margin-bottom: 0; }
-
-    /* --- Media --- */
-    iframe { max-width: 100%; height: auto; margin-top: 10px; border-radius: 8px; }
-
-   
-
-   #certifications h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #333;
-  }
-
-  .cert-category {
-    margin-bottom: 40px;
-  }
-
-  .cert-category strong {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    color: #1a73e8;
-  }
-
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    color: #222;
-    align-items: stretch; /* ensures all cards in a row have equal height */
-
-  }
-
-  .cert-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .cert-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  padding: 15px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  height: 100%; /* ensures flex parent stretches */
-}
-
-  .cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    text-decoration: none;
-    
-  }
-
-  .cert-card p {
-    font-weight: bold;
-    font-size: 0.95em;
-    margin-bottom: 5px;
-    color: #222;
-  }
-
-  .cert-card span {
-    font-size: 0.85em;
-    color: #555;
-  }
-
-
-  .cert-card img {
-  width: 60px;       /* fixed square size */
-  max-height: 60px;
-  object-fit: contain; /* scales image to fit while keeping aspect ratio */
-  margin-bottom: 10px;
-}
- 
-/* --- BCS Professional Membership layout: logo on the right --- */
-.cert-card.bcs-card {
-  display: flex;
-  flex-direction: row; /* horizontal layout */
-  justify-content: space-between;
-  align-items: center; /* vertically center logo with text */
-  text-align: left;
-  padding: 20px;
-  gap: 20px;
-}
-
-.cert-card.bcs-card .bcs-text {
-  display: flex;
-  flex-direction: column; /* keeps Professional Member above BCS */
-}
-
-.cert-card.bcs-card .bcs-text p {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.cert-card.bcs-card .bcs-text span {
-  font-size: 0.85em;
-  color: #555;
-}
-
-.cert-card.bcs-card img {
-  width: 60px;   /* match other cert logos */
-  height: auto;
-  object-fit: contain;
-  margin: 0;      /* remove bottom margin */
-}
-
-
-.cert-card a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-
-
-
-details {
-  margin-top: 10px;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: #2563eb;
-  list-style: none;
-}
-
-summary::marker {
-  display: none;
-}
-
-details ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-details li {
-  margin-bottom: 6px;
-}
-
-
-.contact {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row-reverse; /* right → left */
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.05em;
-  white-space: nowrap;
-}
-
-.contact-item img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-.contact-item a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
-}
-
-.download-cv {
-  color: #222;          /* black text */
-  font-weight: 500;
-}
-
-.download-cv:hover {
-  text-decoration: underline;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Sticky Navigation */
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-}
-
-.nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav-link {
-  font-size: 0.9em;
-  font-weight: 600;
-  color: #555 !important;
-}
-
-.nav-btn {
-  background: #1a73e8;
-  color: #fff !important;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 0.9em;
-  font-weight: 600;
-}
-
-.nav-btn:hover {
-  background: #1557b0;
-  text-decoration: none !important;
-}
-
-/* Adjust header to not be hidden by sticky nav */
-.site-header {
-  margin-top: 50px; 
-}
-
-.carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    display: none; /* Hidden by default */
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 20px;
-    padding: 30px;
-    align-items: center;
-}
-
-.slide-img img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.tag {
-    font-size: 0.75em;
-    font-weight: bold;
-    color: #1a73e8;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.meta {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-.carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.1);
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-    transition: background 0.3s;
-}
-
-.carousel-prev:hover, .carousel-next:hover { background: rgba(0,0,0,0.2); }
-.carousel-prev { left: 10px; }
-.carousel-next { right: 10px; }
-
-/* Mobile logic */
-@media (max-width: 600px) {
-    .slide-grid { grid-template-columns: 1fr; padding: 20px; }
-    .slide-img img { height: 180px; }
-}
-
-@media (max-width: 600px) {
-  .contact {
-    flex-direction: column;       /* stack vertically */
-    align-items: center;          /* center horizontally */
-    text-align: center;           /* optional, aligns text inside items */
-  }
-
-  .contact-item {
-    justify-content: center;      /* center icon + text inside each item */
-  }
-}
-
-
-  @media (max-width: 600px) {
-    .cert-grid {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    }
-  }
-
-
-
-    /* --- Responsive --- */
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-      header p { font-size: 1em; }
-
-      .header-content {
-        flex-direction: column;
-        text-align: center;
-        }
-    }
-  </style>
-
-  <link rel="icon" href="assets/media/ar.png" type="image/png">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Amariah Rigodon — business and technology professional based in Dublin. Technology consulting, solutions architecture and solution engineering.">
+<title>Amariah Rigodon | Business & Technology</title>
+<link rel="icon" href="assets/media/ar.png">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header class="site-header">
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="#speaking" class="nav-link">Speaking</a>
-      <a href="#media-features" class="nav-link">Media</a>
-      <a href="#contact-section" class="nav-link">Get in Touch</a>
-    </div>
-  </nav>
-  <div class="header-content">
-    <img src="assets/media/myself.jpeg" alt="Amariah Rigodon" class="profile-pic">
-    <div class="header-text">
-      <h1>Amariah Rigodon, MBCS</h1>
-      <p style="font-size:1em; color:#555;">
-        Dublin, Ireland
-        
-      </p>
-    </div>
-  </div>
+<header class="nav">
+<div class="container nav-inner">
+<a class="logo" href="#home" aria-label="Amariah home">AR<span>.</span></a>
+<nav aria-label="Primary navigation">
+<a href="#work">Work</a>
+<a href="#education">Education</a>
+<a href="#awards">Awards</a>
+<a href="#speaking">Speaking</a>
+<a href="#media">Media</a>
+<a href="#contact" class="button small">Let's connect ↗</a>
+</nav>
+</div>
 </header>
 
-
-
-<section>
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-    <h2 style="margin:0;">About Me</h2>
-    <a href="assets/media/Amariah Rigodon CV.pdf" target="_blank" class="download-cv">
-       <img src="assets/media/downloads.png" style="height:20px; margin-right:8px; color: #222;">
-       Download CV
-    </a>
-  </div>
-  <div class="card">
-
-    <div style="margin-bottom: 15px;">
-      <p>I’m an IT professional focused on bridging business strategy and technical delivery. I work closely with stakeholders to clarify requirements, fix broken processes, and manage risk and compliance, translating business needs into clear, actionable technical plans that development teams can deliver against.</p>
-    </div>
-    <div>
-      <p>My work sits at the intersection of business, technology, and delivery, where I help organisations turn complex problems into practical IT solutions and ensure technology delivers measurable business value.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div class="card">
-    
-      <div style="margin-bottom: 15px;">
-        <img src="assets/media/DBS_logo.jfif" alt="Dublin Business School Logo" style="height:60px; vertical-align:middle; margin-right:10px;">
-        <strong>MBA in Cloud Computing</strong> – Dublin Business School, Ireland (2026–2027)
-      </div>
-      
-      <div>
-        <img src="assets/media/aston_logo.png" alt="Aston University Logo" style="height:60px; vertical-align:middle; margin-right:10px;">
-        <strong>BSc Computer Science with Business, First Class Honours</strong> – Aston University, UK (2021–2024)
-      </div>
-    
-  </div>
-</section>
-
-
-
-<section id="certifications">
-  <h2>Licenses & Certifications</h2>
-
-  <div class="cert-category">
-  <strong>Professional Memberships</strong>
-  <div class="cert-grid">
-    <div class="cert-card bcs-card">
-    <div class="bcs-text">
-      <p>Professional Member</p>
-      <span>British Computer Society (BCS)</span>
-    </div>
-    <img src="assets/media/bcs_logo.png" alt="BCS Logo" />
-  </div>
-
-   <div class="cert-grid">
-          <a href="https://www.bcs.org/validate-your-digital-badge/?credential=cd8c4ced-9bfd-4ebb-887e-a1cb9aaa6252" target="_blank">
-
-    <div class="cert-card bcs-card">
-    <div class="bcs-text">
-      <p>The Ethical IT Professional</p>
-      <span>British Computer Society (BCS)</span>
-    </div>
-    <img src="assets/media/bcs_logo.png" alt="BCS Logo" />
-  </div>
-  </a>
-  </div>
+<main>
+<section id="home" class="container hero">
+<div>
+<span class="eyebrow">✳ Hi, I'm Amariah 👋</span>
+<h1>I turn business challenges into <em>technology solutions.</em></h1>
+<p>Technology professional combining business analysis, technology consulting and digital transformation to solve meaningful problems.</p>
+<div class="type-line" aria-label="Professional interests">
+<span id="rotating">AWS She Builds Mentee</span>
+<span class="cursor" aria-hidden="true">|</span>
 </div>
-<br>
-
-  <div class="cert-category">
-    <strong>Cloud & Azure</strong>
-    <div class="cert-grid">
-      <a href="https://www.credly.com/badges/e9c3f0bd-9484-44b3-acf4-88d71b4cc107/linked_in_profile" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-        <p>Azure AI Fundamentals</p>
-        <span>Microsoft</span>
-      </div>
-      </a>
-      <a href="https://learn.microsoft.com/en-gb/users/amariahrigodon-9490/credentials/8c5175163e83662f?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-        <p>Azure Fundamentals</p>
-        <span>Microsoft</span>
-      </div>
-      </a>
-      <a href="https://www.credly.com/badges/2bf5b3de-5bb3-494a-ba3b-e0bf5b025b40/linked_in_profile" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-        <p>Security, Compliance & Identity Fundamentals</p>
-        <span>Microsoft</span>
-      </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="cert-category">
-    <strong>Project & Agile</strong>
-    <div class="cert-grid">
-      <a href="https://www.credly.com/badges/54309df4-3a55-43ba-a69d-7f3b2ca37b6b/linked_in_profile" target="_blank">
-        <div class="cert-card">
-          <img src="assets/media/kanban_logo.jfif" alt="ProKanban Logo" />
-          <p>Professional Flow Metrics for Scrum</p>
-          <span>ProKanban.org</span>
-        </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/verify/52H8I6Q2UY2U" target="_blank">
-        <div class="cert-card">
-          <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-          <p>Project Manager Engagement</p>
-          <span>Microsoft</span>
-        </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/verify/JAO3DUWEZL7E" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-        <p>Project Management Fundamentals</p>
-        <span>Microsoft</span>
-      </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="cert-category">
-    <strong>Leadership & Business</strong>
-    <div class="cert-grid">
-      <a href="https://www.coursera.org/account/accomplishments/verify/8GPPMNFTGGOW" target="_blank">
-        <div class="cert-card">
-          <img src="assets/media/glasgow_logo.jfif" alt="Glasgow Logo" />
-          <p>Defining Strategic Business Leadership</p>
-          <span>University of Glasgow</span>
-        </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/verify/8RKKUYTN76PA" target="_blank">
-        <div class="cert-card">
-          <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
-          <p>Influencing People</p>
-          <span>University of Michigan</span>
-        </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QZ4UQ2WJRPH3" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
-        <p>Leading People & Teams</p>
-        <span>University of Michigan</span>
-      </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/verify/KYS7VNLHMA24" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
-        <p>Managing Talent</p>
-        <span>University of Michigan</span>
-      </div>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/verify/PBSJA86VH5B1" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/michigan_logo.png" alt="Michigan Logo" />
-        <p>Inspiring & Motivating Individuals</p>
-        <span>University of Michigan</span>
-      </div>
-    </a>
-    </div>
-  </div>
-
-  <div class="cert-category">
-    <strong>IT & Security</strong>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <img src="assets/media/BSI_logo.png" alt="BSI Logo" />
-        <p>ISO 27001: Information Security Management Systems Certified</p>
-        <span>BSI</span>
-      </div>
-      <a href="https://www.coursera.org/account/accomplishments/verify/SQMS2YNANPRM?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
-      <div class="cert-card">
-        <img src="assets/media/ibm_logo.png" alt="IBM Logo" />
-        <p>Python for Data Science & AI</p>
-        <span>IBM</span>
-      </div>
-      </a>
-      <a href="https://www.freecodecamp.org/certification/amariahrigodon1/foundational-c-sharp-with-microsoft" target="_blank"> 
-      <div class="cert-card">
-        <img src="assets/media/microsoft_logo.png" alt="Microsoft Logo" />
-        <p>Foundational C#</p>
-        <span>Microsoft</span>
-      </div>
-      </a>
-    </div>
-  </div>
-</section>
-     
-
-<section>
-  <h2>Selected Experience</h2>
-
-  <!-- Senior Analyst Programmer -->
-  <div class="card">
-    <h3>Senior Analyst Programmer | Department of ICT, Seychelles (2025)</h3>
-    <p>
-      Delivered large-scale government systems while acting as a bridge between
-      policy stakeholders and technical teams in a national digital transformation environment.
-    </p>
-
-    <details>
-      <summary>View details</summary>
-      <ul>
-        <li>Built and deployed full-stack government applications serving 10,000+ users.</li>
-        <li>Led requirements analysis with non-technical stakeholders, translating needs into technical specifications.</li>
-        <li>Re-engineered workflows to improve efficiency and system adoption across ministries.</li>
-        <li>Ensured compliance with ISO 27001 and national data protection legislation.</li>
-        <li>Supported Agile delivery, UAT coordination, and cross-team collaboration.</li>
-        <li>Trained and onboarded 150+ end-users, accelerating adoption and reducing post-launch support.</li>
-      </ul>
-    </details>
-  </div>
-
-  <!-- Technology Consultant -->
-  <div class="card">
-    <h3>Technology Consultant | ACJ Konsult (Self-Employed), Seychelles (2025)</h3>
-    <p>
-      Worked with public and private sector clients to translate business problems
-      into practical digital solutions across e-commerce, government systems, and compliance-critical platforms.
-    </p>
-
-    <details>
-      <summary>View details</summary>
-      <ul>
-        <li>Led end-to-end delivery of digital solutions from requirements gathering to implementation.</li>
-        <li>Launched and optimised an e-commerce platform, driving 50% revenue growth and improved customer experience.</li>
-        <li>Designed and delivered public sector portals, reducing support demand by 40% through self-service.</li>
-        <li>Advised on data protection, security, and regulatory compliance for high-risk systems.</li>
-        <li>Identified business logic and process gaps, escalating and resolving operational risks.</li>
-      </ul>
-    </details>
-  </div>
-
-  <!-- Amazon -->
-  <div class="card">
-    <h3>Operations Intern - Level 1 Manager | Amazon, United Kingdom (2023)</h3>
-    <p>
-      Worked in a data-driven operations environment focused on process optimisation,
-      decision frameworks, and cross-functional coordination.
-    </p>
-
-    <details>
-      <summary>View details</summary>
-      <ul>
-        <li>Led a process improvement initiative reducing operational workload by 40%.</li>
-        <li>Designed KPI-based decision criteria improving autonomy and consistency across teams.</li>
-        <li>Translated data insights into clear operational guidance for stakeholders.</li>
-        <li>Improved documentation and cross-team alignment, reducing resolution delays.</li>
-        <li>Contributed to feature enhancement proposals aimed at automation and risk reduction.</li>
-      </ul>
-    </details>
-  </div>
-
+<div class="actions">
+<a class="button" href="#work">Explore my work ↗</a>
+<a class="button secondary" href="#contact">Get in touch →</a>
+<a class="text-link" href="assets/media/Amariah Rigodon CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+</div>
+</div>
+<div class="portrait-wrap">
+<img src="assets/media/myself.jpeg" alt="Portrait of Amariah Rigodon" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+<div class="portrait-placeholder" hidden>YOUR PORTFOLIO PHOTO<small>Replace assets/media/myself.jpeg</small></div>
+<span class="floating first">✦ AWS She Builds Mentee</span>
+<span class="floating second">📍 Dublin, Ireland</span>
+</div>
 </section>
 
+<div class="country-strip">
+<div class="container countries">
+<strong>International experience across three countries</strong>
+<div><span>🇸🇨 Seychelles</span><span>🇬🇧 United Kingdom</span><span>🇮🇪 Ireland</span></div>
+</div>
+</div>
 
+<div class="container">
+<div class="logo-banner">
+<div class="logo-label">MY EDUCATION & CERTIFICATION PROVIDERS</div>
+<div class="marquee">
+<div class="marquee-track" aria-label="Aston University, Dublin Business School, AWS Academy, Microsoft, IBM, BCS">
+<div class="logo-set">
+<span>◈ Aston University</span><span>✹ Dublin Business School</span><span>aws Academy</span><span>▦ Microsoft</span><span>IBM</span><span>◉ BCS</span>
+</div>
+<div class="logo-set" aria-hidden="true">
+<span>◈ Aston University</span><span>✹ Dublin Business School</span><span>aws Academy</span><span>▦ Microsoft</span><span>IBM</span><span>◉ BCS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-<section id="media-features">
-  <h2>Media Features</h2>
- 
-   <!-- TV interview -->
-  <div class="card">
-    <p>
-      <a href="https://www.facebook.com/share/v/189fosKDdv/?mibextid=wwXIfr" target="_blank">
-        Hashtag Youth Vibes - Episode 3
-      </a>
-      - Broadcast on TeleSesel, November 2025
-    </p>
-  </div>
-
-  <!-- PDF-only article -->
-  <div class="card">
-    <p>
-      <a href="assets/media/Sacrificing fun now for greater rewards later.pdf" target="_blank">
-        Sacrificing fun now for greater rewards later
-      </a>
-      - Published in Today Seychelles Newspaper, 20 July 2025
-    </p>
-  </div>
-
-  <!-- Partial online article + PDF -->
-  <div class="card">
-    <p>
-      <a href="https://www.nation.sc/articles/26297/up-close-with--amariah-rigodon" target="_blank">
-        Carving a niche in the Tech industry
-      </a>
-      |
-      <a href="assets/media/Carving a niche in the Tech Industry - Newspaper Article.pdf" target="_blank">
-        Read Full PDF
-      </a>
-      - Published in Seychelles Nation Newspaper, 03 June 2025
-    </p>
-  </div>
-
-  <!-- Fully online article -->
-  <div class="card">
-    <p>
-      <a href="https://www.nation.sc/articles/9912/chat-with-three-outstanding-a-level-exams-students-from-the-independent-school" target="_blank">
-        Chat with three outstanding A-Level exams students from the Independent School
-      </a>
-      - Published in Seychelles Nation Newspaper, 28 July 2021
-    </p>
-  </div>
-
+<section class="container section about">
+<div class="reveal">
+<span class="eyebrow">A LITTLE ABOUT ME</span>
+<h2>Where business thinking meets technology.</h2>
+<p>I'm a Seychellois technology professional based in Dublin, with experience spanning Seychelles, the United Kingdom and Ireland.</p>
+<p>From government digital transformation and consulting to software delivery and entrepreneurship, I've worked on both the business and technical sides of digital solutions.</p>
+<p>I hold a First Class Honours BSc in Computer Science with Business and I'm currently completing an MBA in Cloud Computing. I'm particularly interested in technology consulting, solutions architecture and solution engineering.</p>
+</div>
+<aside class="skills reveal">
+<h3>What I bring to the table ✦</h3>
+<div class="skill-grid">
+<div>◇ Solution Design</div>
+<div>✦ Requirements Analysis</div>
+<div>♧ Stakeholder Engagement</div>
+<div>☁ Cloud Fundamentals</div>
+<div>↗ Digital Transformation</div>
+<div>◎ Process Improvement</div>
+</div>
+</aside>
 </section>
 
-<section id="speaking">
-    <h2>Speaking & Engagements</h2>
-    <div class="carousel-container">
-        <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
-        
-        <div class="carousel-track">
-
-          <div class="slide active">
-                      <div class="slide-grid">
-                          <div class="slide-img">
-                              <img src="assets/media/unisey2.jpeg" alt="Hackathon Keynote">
-                          </div>
-                          <div class="slide-text">
-                              <span class="tag">Keynote</span>
-                              <h3>Gender Equality in Digital Transformation</h3>
-                              <p class="meta">Hackathon 2025 Award Ceremony, University of Seychelles</p>
-                              <p>A keynote address on my journey as a woman in tech, advocating for merit-based representation and building inclusive digital futures.</p>
-                              <a href="assets/media/Gender EQUALILTY.pdf" class="btn-link" target="_blank">View Presentation Slides →</a>
-                          </div>
-                      </div>
-                  </div>
-
-            <div class="slide ">
-                <div class="slide-grid">
-                    <div class="slide-img">
-                      <video 
-                          controls 
-                          muted 
-                          playsinline 
-                          style="width:100%; border-radius:8px; background-color:#000;">
-                          <source src="assets/media/Trade2.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
-                    <div class="slide-text">
-                        <span class="tag">Technical Session</span>
-                        <h3>Stakeholder Engagement: Digital Identity & eServices</h3>
-                        <p class="meta">Department of ICT & Trade Division Workshop (2025)</p>
-                        <p>Led a technical walkthrough for national organizations transitioning to the monServis platform. Covered SeyID registration and the migration of the iEpermit eService to ensure a seamless transition for high-frequency users.</p>
-                        <div class="slide-links">
-                            <a href="https://www.seyid.gov.sc" target="_blank">SeyID</a> |
-                            <a href="https://www.monservis.gov.sc" target="_blank">monServis</a> |
-                            <a href="https://www.bizauth.gov.sc/" target="_blank">BizAuth Portal</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <div class="slide-grid">
-                   <!-- <div class="slide-img">
-                        <img src="assets/media/SITE.jpeg" alt="SITE Talk">
-                    </div>-->
-                    <div class="slide-img">
-                          <video 
-                              controls 
-                              muted 
-                              playsinline 
-                              style="width:100%; border-radius:8px; background-color:#000;">
-                              <source src="assets/media/SITE3.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                          </video>
-                      </div>
-                    <div class="slide-text">
-                        <span class="tag">Talk</span>
-                        <h3>Technology as a Driver of Productivity</h3>
-                        <p class="meta">SITE Productivity Week (2025)</p>
-                        <p>Explored how AI, automation, and digital collaboration are reshaping the modern workspace and classroom. Discussed both opportunities and challenges of digital transformation, including cultural impact, workforce readiness, and ethical considerations.</p>                    </div>
-                </div>
-            </div>
-
-            
-          
-
-             <div class="slide">
-                <div class="slide-grid">
-                    <div class="slide-img">
-                        <img src="assets/media/SUTalk.png" alt="Student Panel">
-                    </div>
-                    <div class="slide-text">
-                        <span class="tag">Panelist</span>
-                        <h3>The International Student Experience</h3>
-                        <p class="meta">Aston University Student Union, Aston University</p>
-                        <p>Sharing insights on navigating higher education and professional growth as an international student in the UK.</p>
-                        <a href="assets/media/certificate.png" class="btn-link" target="_blank">View Certificate →</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="slide">
-                <div class="slide-grid">
-                    <div class="slide-img">
-                        <img src="assets/media/Apollo.png" alt="Apollo">
-                    </div>
-                    <div class="slide-text">
-                        <span class="tag">Winner</span>
-                        <h3>Apollo Pitching Competition</h3>
-                        <p class="meta">Aston Centre for Enterprise & Entrepreneurship, Aston University</p>
-                        <p>Developed and pitched a business model following a 4-week intensive on innovation and storytelling.</p>
-                    </div>
-                </div>
-            </div>
-
-             <div class="slide">
-                <div class="slide-grid">
-                    <div class="slide-img">
-                        <img src="assets/media/IndeTalk.png" alt="Independent School Keynote">
-                    </div>
-                    <div class="slide-text">
-                        <span class="tag">Guest Speaker</span>
-                        <h3>Careers in Tech & Beyond</h3>
-                        <p class="meta"> Independent School A-Level Computer Science Class</p>
-                        <p>Returning to my alma mater to bridge the gap between classroom theory and industry reality. Discussed varied tech roles (Cybersecurity, Fintech, Product Management) and the "soft skills" required for university and the workplace.</p>
-                        <a href="assets/media/Independent School Talk.pdf" class="btn-link" target="_blank">View Presentation Slides →</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="slide">
-                <div class="slide-grid">
-                    <div class="slide-img">
-                        <img src="assets/media/SNYCTalk.png" alt="SYNC Keynote">
-                    </div>
-                    <div class="slide-text">
-                        <span class="tag">Industry Guest</span>
-                        <h3>Youth Tech Workshop</h3>
-                        <p class="meta"> Seychelles National Youth Council</p>
-                        <p>Engaged with the Youth Tech group to discuss real-world development cycles. Shared insights on the importance of version control (GitHub), prioritizing core functionality, and managing project timelines effectively.</p>
-                    </div>
-                </div>
-            </div>
-
-
-          </div>
-
-        <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
+<section id="work" class="section tinted">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">EXPERIENCE</span>
+<h2>Work Experience</h2>
+<p>Explore my career through different roles and responsibilities.</p>
+</div>
+<div class="filters" id="filters"></div>
+<div class="master">
+<div class="selector-list" id="work-list"></div>
+<article class="detail-box" id="work-detail" aria-live="polite"></article>
+</div>
+</div>
 </section>
 
-
-<section id="contact-section">
-  <h2>Contact</h2>
-
-  <div class="contact">
-    <div class="contact-item">
-      <img src="assets/media/email.png" alt="Email icon">
-      <span>rigodonamariah20@gmail.com</span>
-    </div>
-
-    <div class="contact-item">
-      <img src="assets/media/phone.png" alt="Phone icon">
-      <span>+353 (89) 488 4272</span>
-    </div>
-
-    <div class="contact-item">
-      <img src="assets/media/linkedin.png" alt="LinkedIn icon">
-      <a href="https://www.linkedin.com/in/amariah-rigodon/" target="_blank">
-        Amariah Rigodon
-      </a>
-    </div>
-  </div>
+<section id="education" class="container section">
+<div class="section-head">
+<span class="eyebrow">ACADEMIC JOURNEY</span>
+<h2>Education</h2>
+</div>
+<div class="timeline">
+<article class="education-card reveal">
+<img src="assets/media/DBS_logo.jfif" alt="DBS logo" onerror="this.style.display='none'">
+<h3>MBA in Cloud Computing</h3>
+<strong>Dublin Business School · Ireland</strong>
+<p class="date">2026–2027 · In progress</p>
+<ul>
+<li>Cloud computing and business studies</li>
+<li>Class Representative</li>
+<li>MBA Society Vice President</li>
+</ul>
+</article>
+<article class="education-card right reveal">
+<img src="assets/media/aston_logo.png" alt="Aston University logo" onerror="this.style.display='none'">
+<h3>BSc Computer Science with Business</h3>
+<strong>Aston University · United Kingdom</strong>
+<p class="date">2021–2024 · First Class Honours</p>
+<ul>
+<li>Outstanding Final Year Project Prize</li>
+<li>Computer Science Subject Group Prize</li>
+<li>Government of Seychelles undergraduate scholarship</li>
+</ul>
+</article>
+</div>
 </section>
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
 
-  function moveSlide(direction) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-  }
+<section id="certifications" class="section tinted">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">PROFESSIONAL CREDENTIALS</span>
+<h2>Featured Certifications</h2>
+<p>Use the arrows to explore. Click a credential to view its verification page when available.</p>
+</div>
+<div class="cert-carousel">
+<button id="cert-prev" class="circle-button" aria-label="Previous certifications">‹</button>
+<div id="cert-cards" class="cert-grid" aria-live="polite"></div>
+<button id="cert-next" class="circle-button" aria-label="Next certifications">›</button>
+</div>
+<div id="cert-count" class="page-number"></div>
+</div>
+</section>
 
-</script>
+<section id="awards" class="container section">
+<div class="section-head"><span class="eyebrow">RECOGNITION</span><h2>Awards & Achievements</h2></div>
+<div class="award-grid">
+<article class="award reveal"><span>🏆</span><div><h3>Outstanding Final Year Project Prize</h3><p>Aston University</p></div></article>
+<article class="award reveal"><span>✦</span><div><h3>Computer Science Subject Group Prize</h3><p>Aston University</p></div></article>
+<article class="award reveal"><span>🎤</span><div><h3>Best Speaker Award</h3><p>MBA vs Law Society Debate</p></div></article>
+<article class="award reveal"><span>🥇</span><div><h3>Apollo Pitching Competition Winner</h3><p>Aston University</p></div></article>
+<article class="award reveal"><span>🌍</span><div><h3>Top in the World — AS Level History</h3><p>Cambridge examination achievement</p></div></article>
+<article class="award reveal"><span>⭐</span><div><h3>Highest Mark in Seychelles</h3><p>Cambridge A Level Computer Science, Business and History</p></div></article>
+</div>
+</section>
+
+<section id="projects" class="section tinted">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">PORTFOLIO</span>
+<h2>Selected Projects</h2>
+<p>Click a card to see the detail. Project descriptions are drafts and can be replaced later.</p>
+</div>
+<div id="projects-grid" class="project-grid"></div>
+</div>
+</section>
+
+<section id="media" class="container section">
+<div class="section-head">
+<span class="eyebrow">IN THE SPOTLIGHT</span>
+<h2>Media Features</h2>
+<p>Interviews and stories featuring my career, experiences and perspectives.</p>
+</div>
+<div class="media-grid">
+<article class="media-card reveal">
+<div class="media-art tv">▣</div>
+<div class="media-body">
+<span class="eyebrow">TELEVISION · NOVEMBER 2025</span>
+<h3>Hashtag Youth Vibes — Episode 3</h3>
+<p>TeleSesel broadcast</p>
+<a href="https://www.facebook.com/share/v/189fosKDdv/?mibextid=wwXIfr" target="_blank" rel="noopener">Watch feature ↗</a>
+</div>
+</article>
+<article class="media-card reveal">
+<div class="media-art">▤</div>
+<div class="media-body">
+<span class="eyebrow">NEWSPAPER · 20 JULY 2025</span>
+<h3>Sacrificing Fun Now for Greater Rewards Later</h3>
+<p>Today Seychelles Newspaper</p>
+<a href="assets/media/Sacrificing fun now for greater rewards later.pdf" target="_blank" rel="noopener">Read article ↗</a>
+</div>
+</article>
+<article class="media-card reveal">
+<div class="media-art">▤</div>
+<div class="media-body">
+<span class="eyebrow">NEWSPAPER · 3 JUNE 2025</span>
+<h3>Carving a Niche in the Tech Industry</h3>
+<p>Seychelles Nation Newspaper</p>
+<a href="https://www.nation.sc/articles/26297/up-close-with--amariah-rigodon" target="_blank" rel="noopener">Read article ↗</a>
+<a href="assets/media/Carving a niche in the Tech Industry - Newspaper Article.pdf" target="_blank" rel="noopener">Full PDF ↗</a>
+</div>
+</article>
+<article class="media-card reveal">
+<div class="media-art">▤</div>
+<div class="media-body">
+<span class="eyebrow">NEWSPAPER · 28 JULY 2021</span>
+<h3>Chat with Three Outstanding A-Level Students</h3>
+<p>Seychelles Nation Newspaper</p>
+<a href="https://www.nation.sc/articles/9912/chat-with-three-outstanding-a-level-exams-students-from-the-independent-school" target="_blank" rel="noopener">Read article ↗</a>
+</div>
+</article>
+</div>
+</section>
+
+<section id="speaking" class="section tinted">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">BEYOND THE JOB TITLE</span>
+<h2>Leadership, Speaking & Community</h2>
+<p>Presentations, speaking engagements and community involvement from my professional journey.</p>
+</div>
+<div id="speaking-grid" class="speaking-grid"></div>
+</div>
+</section>
+
+<section id="approach" class="container section">
+<div class="section-head">
+<span class="eyebrow">MY APPROACH</span>
+<h2>How I solve problems.</h2>
+<p>I combine stakeholder insight, observation and process analysis with practical solution design to address the underlying business need.</p>
+</div>
+<div class="steps">
+<article><b>01</b><h3>Investigate</h3><p>Listen to stakeholders and observe how work really happens. Compare the current and desired states to uncover root causes and clarify the real objective.</p></article>
+<article><b>02</b><h3>Analyse & Design</h3><p>Identify process gaps and improvement opportunities, then translate findings into clear requirements and well-reasoned solution recommendations.</p></article>
+<article><b>03</b><h3>Collaborate & Deliver</h3><p>Partner with business and technical teams to build, test and introduce solutions that address the agreed need.</p></article>
+<article><b>04</b><h3>Measure & Improve</h3><p>Evaluate results, support adoption and use feedback to make ongoing improvements that deliver lasting value.</p></article>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<span class="eyebrow">OPEN TO FULL-TIME OPPORTUNITIES IN DUBLIN</span>
+<h2>Looking for someone who connects <em>business and technology?</em></h2>
+<p>I'm seeking opportunities in <strong>Technology Consulting, Solution Engineering and Solutions Architecture</strong> in Dublin. I'd love to hear from hiring managers, recruiters and teams solving meaningful technology challenges.</p>
+<div class="actions centered">
+<a class="button" href="mailto:rigodonamariah24@gmail.com?subject=Career%20Opportunity">Discuss an opportunity ↗</a>
+<a class="button secondary" href="https://www.linkedin.com/in/amariah-rigodon/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>AR. · Amariah Rigodon</h3>
+<p>Technology · Business · Impact</p>
+<p>Dublin, Ireland</p>
+<p>Experience in Seychelles, UK & Ireland</p>
+</div>
+<div>
+<h3>Contact</h3>
+<a href="mailto:rigodonamariah24@gmail.com">rigodonamariah24@gmail.com</a>
+<a href="https://www.linkedin.com/in/amariah-rigodon/" target="_blank" rel="noopener">LinkedIn ↗</a>
+</div>
+<div>
+<h3>Explore</h3>
+<a href="#work">Work Experience</a>
+<a href="#projects">Projects</a>
+<a href="#awards">Awards</a>
+<a href="#media">Media Features</a>
+<a href="#speaking">Public Speaking</a>
+</div>
+</div>
+<div class="copyright">© 2026 Amariah Rigodon · Designed for meaningful impact</div>
+</div>
+</footer>
+
+<div class="dialog-backdrop" id="project-backdrop" hidden>
+<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title">
+<button class="dialog-close" id="dialog-close" aria-label="Close project">×</button>
+<span class="eyebrow" id="dialog-category"></span>
+<h2 id="project-dialog-title"></h2>
+<p id="dialog-description"></p>
+<h3>Highlights</h3>
+<ul id="dialog-points"></ul>
+<button class="button secondary" id="dialog-back">← Back to portfolio</button>
+</div>
+</div>
 </body>
 </html>
