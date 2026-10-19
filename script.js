@@ -131,19 +131,7 @@ const roles = [
     ]
   },
 
-  {
-    category: 'Part-time',
-    logo: 'OB',
-    name: 'Retail Team Member',
-    org: 'Oliver Bonas, Dublin, Ireland',
-    date: '2026 – Present',
-    intro: 'Working in a customer-facing retail environment alongside MBA studies, strengthening customer communication, commercial awareness and teamwork.',
-    metric: 'Customer engagement · Retail operations',
-    bullets: [
-      'Support customers in a fast-paced retail environment, communicating product information and responding to customer needs.',
-      'Collaborate with colleagues to support day-to-day store operations and customer experience.'
-    ]
-  },
+  
 
   {
     category: 'Leadership',
