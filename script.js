@@ -603,9 +603,8 @@ const words = [
   'AWS She Builds Mentee',
   'MBA in Cloud Computing',
   'Technology Consultant',
-  'Award-Winning Speaker',
   'Aspiring Solutions Architect',
-  'Lived & Worked in Three Countries'
+  'Lived & Worked in Ireland, UK and Seychelles'
 ];
 
 const rotate = $('#rotating');
