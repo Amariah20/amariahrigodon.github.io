@@ -267,7 +267,22 @@ renderRoles();
 // CERTIFICATIONS CAROUSEL
 // ==============================
 
+
 const certifications = [
+  {
+    name: 'AWS Solutions Architect – Associate (studying)',
+    issuer: 'AWS · In progress',
+    image: 'aws logo.png',
+    url: '',
+    abbr: 'SAA'
+  },
+  {
+    name: 'AWS Academy Cloud Foundations',
+    issuer: 'AWS Academy',
+    image: 'aws logo.png',
+    url: 'https://www.credly.com/badges/361215da-6ad9-44bb-997e-1cfcc63bda40/linked_in_profile',
+    abbr: 'AWS'
+  },
   {
     name: 'Azure AI Fundamentals',
     issuer: 'Microsoft',
@@ -288,13 +303,6 @@ const certifications = [
     image: 'microsoft_logo.png',
     url: 'https://www.credly.com/badges/2bf5b3de-5bb3-494a-ba3b-e0bf5b025b40/linked_in_profile',
     abbr: 'SC-900'
-  },
-  {
-    name: 'AWS Academy Cloud Foundations',
-    issuer: 'AWS Academy',
-    image: '',
-    url: '',
-    abbr: 'AWS'
   },
   {
     name: 'ISO/IEC 27001 Lead Implementer',
@@ -330,15 +338,9 @@ const certifications = [
     image: 'michigan_logo.png',
     url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/QZ4UQ2WJRPH3',
     abbr: 'LEAD'
-  },
-  {
-    name: 'AWS Solutions Architect – Associate (studying)',
-    issuer: 'AWS · In progress',
-    image: '',
-    url: '',
-    abbr: 'SAA'
   }
 ];
+
 
 let certIndex = 0;
 
@@ -380,7 +382,9 @@ function renderCerts() {
       a.rel = 'noopener noreferrer';
       card.append(a);
     } else {
-      card.append(e('span', 'date', c.abbr === 'SAA' ? 'In progress' : 'Verification link to add'));
+      if (c.abbr === 'SAA') {
+          card.append(e('span', 'date', 'In progress'));
+      }
     }
 
     grid.append(card);
