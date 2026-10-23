@@ -651,13 +651,7 @@ talks.forEach(t => {
     e('p', '', t.description)
   );
 
-  if (t.slides) {
-    const a = e('a', '', 'View supporting document ↗');
-    a.href = 'assets/media/' + t.slides;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    body.append(a);
-  }
+  
 
   card.append(visual, body);
   speaking.append(card);
