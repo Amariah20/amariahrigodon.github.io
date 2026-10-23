@@ -636,7 +636,6 @@ let n = words[0].length;
 let erase = true;
 
 function type() {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   if (erase) {
     n--;
