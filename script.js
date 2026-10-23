@@ -619,6 +619,60 @@ talks.forEach(t => {
 });
 
 
+ // ==============================
+ // ROTATING / TYPING HEADLINE
+ // ==============================
+
+const words = [
+  'AWS She Builds Mentee',
+  'MBA in Cloud Computing',
+  'Technology Consultant',
+  'Aspiring Solutions Architect',
+  'Lived & Worked in Ireland, UK and Seychelles'
+];
+
+const rotate = document.getElementById('rotating');
+
+if (rotate) {
+  let wordIndex = 0;
+  let charIndex = words[0].length;
+  let deleting = true;
+
+  rotate.textContent = words[0];
+
+  function typeText() {
+    if (deleting) {
+      charIndex--;
+
+      rotate.textContent =
+        words[wordIndex].slice(0, charIndex);
+
+      if (charIndex <= 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        charIndex = 0;
+        setTimeout(typeText, 300);
+        return;
+      }
+    } else {
+      charIndex++;
+
+      rotate.textContent =
+        words[wordIndex].slice(0, charIndex);
+
+      if (charIndex >= words[wordIndex].length) {
+        deleting = true;
+        setTimeout(typeText, 1800);
+        return;
+      }
+    }
+
+    setTimeout(typeText, deleting ? 40 : 70);
+  }
+
+  setTimeout(typeText, 1800);
+}
+
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
