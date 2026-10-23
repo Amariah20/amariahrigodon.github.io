@@ -566,7 +566,7 @@ const talks = [
 },
   {
   category: 'Debate',
-  name: 'MBA vs Law Society Debate — Team Captain',
+  name: 'MBA vs Law Society Debate - Team Captain',
   context: 'Dublin Business School · March 2026',
   description: 'Captained the MBA team in a debate on consumer protection laws and economic growth, leading team preparation and argument strategy. Awarded Best Speaker.',
   image: 'debate.jpg'
