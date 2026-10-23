@@ -193,7 +193,7 @@ const roles = [
     org: 'Central Bank of Seychelles',
     date: 'May 2025 – 2026',
     intro: 'Selected for the Central Bank of Seychelles Youth for Youth Financial Education Ambassadors Programme, an initiative designed to strengthen financial literacy among young people through professional training and community engagement.',
-    metric: 'Selected cohort of 12 · Financial literacy · Professional development',
+    metric: ' Financial literacy · Professional development',
     bullets: [
       'Selected as one of 12 young ambassadors for the Central Bank of Seychelles Youth for Youth Financial Education Ambassadors Programme.',
       'Participated in professional learning sessions delivered by financial-sector and public-sector specialists, developing knowledge of personal financial management, budgeting, savings, investment and responsible borrowing.',
