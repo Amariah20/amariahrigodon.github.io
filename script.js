@@ -133,18 +133,22 @@ const roles = [
 
   
 
+ 
   {
     category: 'Leadership',
     logo: 'DBS',
     name: 'Vice President',
     org: 'MBA Society, Dublin Business School',
     date: 'March 2026 – August 2026',
-    intro: 'Contributed to the leadership and development of the MBA Society, supporting student engagement, event coordination and relationships with university stakeholders.',
-    metric: 'Student leadership · Events · Stakeholder engagement',
+    intro: 'Supported the leadership and operations of the MBA Society, coordinating executive-team activities, strengthening governance and contributing to initiatives connecting MBA students with industry professionals and alumni.',
+    metric: 'Executive coordination · Governance · Student engagement',
     bullets: [
-      'Supported the planning and delivery of society initiatives, events and networking opportunities for MBA students.',
-      'Collaborated with fellow society leaders, university representatives and external guests to support professional and academic engagement.',
-      'Contributed to society organisation, governance and leadership handover activities.'
+      'Coordinated executive-team priorities, responsibilities and timelines, supporting collaboration and accountability across society initiatives.',
+      'Supported the planning and delivery of student, networking and professional-development events, including guest sessions with industry leaders, social events and career-development activities.',
+      'Developed an Executive Team Standard Operating Procedure (SOP) covering responsibilities, approval workflows, communications, event planning and post-event reviews.',
+      'Developed the "From Classroom to Career: Alumni Who Inspire" initiative to showcase MBA alumni career journeys and strengthen connections between current students and graduates.',
+      'Worked closely with the Society President to address operational challenges, align priorities and support effective decision-making.',
+      'Contributed to leadership handover activities, promoting continuity and clearer ways of working for future executive teams.'
     ]
   },
 
@@ -154,27 +158,68 @@ const roles = [
     name: 'Class Representative',
     org: 'Dublin Business School, Ireland',
     date: 'January 2026 – Present',
-    intro: 'Represent the MBA cohort, supporting communication and constructive engagement between students and academic stakeholders.',
-    metric: 'Student advocacy · Stakeholder communication',
+    intro: 'Represent the MBA cohort, acting as a communication link between students and university management to raise concerns, communicate feedback and support improvements to the student experience.',
+    metric: 'Student representation · Feedback management · Stakeholder communication',
     bullets: [
-      'Represent student perspectives and communicate feedback, concerns and suggestions to relevant academic stakeholders.',
-      'Support communication between students and faculty to promote constructive discussion and improvements to the student experience.'
+      'Collect and consolidate feedback, concerns and suggestions from MBA students, identifying issues requiring attention from university management.',
+      'Communicate student concerns to relevant academic and administrative stakeholders, ensuring student perspectives are represented.',
+      'Relay management responses, decisions and resulting changes to students, closing the feedback loop and improving transparency.',
+      'Maintain communication between students and university stakeholders to support constructive dialogue and continuous improvement.'
+    ]
+  },
+
+  {
+    category: 'Leadership',
+    logo: 'DBS',
+    name: 'MBA Debate Team Captain',
+    org: 'Dublin Business School, Ireland',
+    date: 'March 2026',
+    intro: 'Captained the MBA team in an inter-society debate competition, leading strategic preparation, team coordination and debate delivery. The team won the competition, and I received the Best Speaker Award.',
+    metric: 'Competition winners · Best Speaker Award · Team leadership',
+    bullets: [
+      'Coordinated with the opposing team captain to agree potential debate topics, competition rules, format and speaker arrangements.',
+      'Led team preparation by communicating the debate motion and position, developing core arguments and coordinating research and contributions.',
+      'Allocated speaking responsibilities and presentation order based on team members’ strengths while allowing individuals ownership of their arguments.',
+      'Organised and led practice sessions, providing constructive feedback on argument quality, rebuttals and presentation techniques.',
+      'Managed last-minute team withdrawals by recruiting replacements and reorganising arguments and speaking responsibilities.',
+      'Led the team to victory and received the competition’s Best Speaker Award for individual debate performance.'
     ]
   },
 
   {
     category: 'Volunteering',
-    logo: '+',
-    name: 'Volunteering Experience',
-    org: 'Details to be added',
-    date: 'Coming soon',
-    intro: 'Reserved for volunteering and community initiatives.',
-    metric: 'Content to be added',
+    logo: 'CBS',
+    name: 'Financial Education Ambassador',
+    org: 'Central Bank of Seychelles',
+    date: 'May 2025 – 2026',
+    intro: 'Selected for the Central Bank of Seychelles Youth for Youth Financial Education Ambassadors Programme, an initiative designed to strengthen financial literacy among young people through professional training and community engagement.',
+    metric: 'Selected cohort of 12 · Financial literacy · Professional development',
     bullets: [
-      'Add confirmed volunteering activities, responsibilities and outcomes.'
+      'Selected as one of 12 young ambassadors for the Central Bank of Seychelles Youth for Youth Financial Education Ambassadors Programme.',
+      'Participated in professional learning sessions delivered by financial-sector and public-sector specialists, developing knowledge of personal financial management, budgeting, savings, investment and responsible borrowing.',
+      'Developed an understanding of entrepreneurship, financial markets, government securities, fiscal policy, pension systems, consumer protection and financial-sector regulation.',
+      'Received training in financial integrity topics, including anti-money laundering, counter-terrorist financing, anti-bribery and corruption.',
+      'Collaborated with fellow ambassadors on the early development of a financial-education initiative, departing Seychelles before the initiative was finalised.'
+    ]
+  },
+
+  {
+    category: 'Volunteering',
+    logo: 'OAI',
+    name: 'Founding Member',
+    org: 'OCEAN AI, Seychelles',
+    date: '2026',
+    intro: 'One of five founding members involved in establishing OCEAN AI, a grassroots non-governmental organisation focused on expanding access to artificial intelligence, STEM education and digital skills in Seychelles.',
+    metric: 'Founding member · AI & STEM education · Community development',
+    bullets: [
+      'Served as one of five founding members involved in establishing OCEAN AI as a non-governmental organisation in Seychelles.',
+      'Supported the establishment of an organisation dedicated to improving access to AI, programming and STEM education for Seychellois learners.',
+      'Contributed as a founding member to an initiative focused on developing local technical talent and connecting technology education with national development opportunities.',
+      'Supported the organisation’s mission of making technology learning more accessible and encouraging greater Seychellois participation in AI and digital innovation.'
     ]
   }
 ];
+
 
 
 
