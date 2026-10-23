@@ -1458,3 +1458,21 @@ h2 {
     transition: none !important;
   }
 }
+
+
+/* Centre certification carousel arrows */
+.cert-carousel {
+  display: flex;
+  align-items: center !important;
+  gap: 16px;
+}
+
+.cert-carousel .circle-button {
+  flex-shrink: 0;
+  align-self: center !important;
+  margin: 0 !important;
+  position: relative;
+  top: 0 !important;
+  transform: none !important;
+}
+
