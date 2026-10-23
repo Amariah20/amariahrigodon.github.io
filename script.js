@@ -609,7 +609,21 @@ const talks = [
     context: 'Seychelles National Youth Council',
     description: 'Software delivery, version control and effective project planning.',
     image: 'SNYCTalk.png'
-  }
+  },
+{
+  category: 'Debate',
+  name: 'MBA vs Law Society Debate — Team Captain',
+  context: 'Dublin Business School · March 2026',
+  description: 'Captained the MBA team in a debate on consumer protection laws and economic growth, leading team preparation and argument strategy. Awarded Best Speaker.',
+  image: 'debate.jpg'
+},
+{
+  category: 'Strategy Competition',
+  name: 'MBAAI National Strategy Competition',
+  context: 'MBA Association of Ireland · Aptiv, Dublin · February 2026',
+  description: 'Represented Dublin Business School in a national MBA competition, opening our team presentation and collaborating under pressure to develop a strategy positioning Ireland in the emerging autonomous vehicle sector.',
+  image: 'strategy.jpg'
+}
 ];
 
 const speaking = $('#speaking-grid');
