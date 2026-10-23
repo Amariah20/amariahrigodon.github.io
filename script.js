@@ -618,54 +618,6 @@ talks.forEach(t => {
   speaking.append(card);
 });
 
-// ==============================
-// ROTATING / TYPING HEADLINE
-// ==============================
-
-const words = [
-  'AWS She Builds Mentee',
-  'MBA in Cloud Computing',
-  'Technology Consultant',
-  'Aspiring Solutions Architect',
-  'Lived & Worked in Ireland, UK and Seychelles'
-];
-
-const rotate = $('#rotating');
-let wi = 0;
-let n = words[0].length;
-let erase = true;
-
-function type() {
-
-  if (erase) {
-    n--;
-    rotate.textContent = words[wi].slice(0, n);
-
-    if (n <= 0) {
-      erase = false;
-      wi = (wi + 1) % words.length;
-      setTimeout(type, 240);
-      return;
-    }
-  } else {
-    n++;
-    rotate.textContent = words[wi].slice(0, n);
-
-    if (n >= words[wi].length) {
-      erase = true;
-      setTimeout(type, 1650);
-      return;
-    }
-  }
-
-  setTimeout(type, erase ? 35 : 58);
-}
-
-setTimeout(type, 1700);
-
-// ==============================
-// SCROLL REVEAL ANIMATIONS
-// ==============================
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
