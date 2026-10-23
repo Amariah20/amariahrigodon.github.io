@@ -531,27 +531,31 @@ document.addEventListener('keydown', ev => {
   if (ev.key === 'Escape' && !$('#project-backdrop').hidden) closeProject();
 });
 
+
 const projectGrid = $('#projects-grid');
 
-projects.forEach(project => {
-  const article = e('article', 'project-card');
-  article.style.setProperty('--accent', project.color);
+if (projectGrid) {
+  projects.forEach(project => {
+    const article = e('article', 'project-card');
+    article.style.setProperty('--accent', project.color);
 
-  article.append(
-    e('div', 'project-icon', project.icon),
-    e('span', 'project-type', project.type),
-    e('h3', '', project.title),
-    e('p', '', project.description),
-    e('div', 'project-outcome', '✦ ' + project.metric)
-  );
+    article.append(
+      e('div', 'project-icon', project.icon),
+      e('span', 'project-type', project.type),
+      e('h3', '', project.title),
+      e('p', '', project.description),
+      e('div', 'project-outcome', '✦ ' + project.metric)
+    );
 
-  const b = e('button', '', 'View details ↗');
-  b.type = 'button';
-  b.addEventListener('click', () => openProject(project));
+    const b = e('button', '', 'View details ↗');
+    b.type = 'button';
+    b.addEventListener('click', () => openProject(project));
 
-  article.append(b);
-  projectGrid.append(article);
-});
+    article.append(b);
+    projectGrid.append(article);
+  });
+}
+
 
 // ==============================
 // SPEAKING AND ENGAGEMENTS
