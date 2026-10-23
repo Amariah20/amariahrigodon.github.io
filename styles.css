@@ -1476,3 +1476,224 @@ h2 {
   transform: none !important;
 }
 
+
+/* =====================================
+   AWS SHE BUILDS MENTORSHIP
+   ===================================== */
+
+.mentorship-section {
+  background: #faf6fc;
+  padding: 85px 0;
+}
+
+.mentorship-section .section-head {
+  margin-bottom: 35px;
+}
+
+.mentorship-card {
+  background: #fff;
+  border: 1px solid #eadfee;
+  border-top: 5px solid #ef6294;
+  border-radius: 24px;
+  padding: 38px;
+  box-shadow: 0 12px 35px rgba(80, 53, 100, 0.05);
+}
+
+/* AWS logo and status */
+
+.mentorship-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee6f1;
+}
+
+.mentorship-logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.mentorship-logo img {
+  width: 90px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.mentorship-logo strong {
+  display: block;
+  color: #28233b;
+  font-size: 16px;
+}
+
+.mentorship-logo span {
+  display: block;
+  color: #756f84;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.mentorship-status {
+  padding: 9px 17px;
+  border-radius: 30px;
+  background: #fce5ef;
+  color: #b83d75;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Main introduction */
+
+.mentorship-intro {
+  padding: 32px 0 18px;
+}
+
+.mentorship-intro h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.3;
+  color: #28233b;
+  max-width: 750px;
+  margin-bottom: 18px;
+}
+
+.mentorship-intro p {
+  max-width: 880px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #625b71;
+}
+
+/* Mentorship cards */
+
+.mentorship-journey > h3 {
+  color: #28233b;
+  font-size: 23px;
+  margin: 25px 0;
+}
+
+.mentorship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.mentorship-item {
+  background: #f8f4fc;
+  border: 1px solid #ebe3f2;
+  border-left: 4px solid #ef6294;
+  padding: 26px;
+  border-radius: 16px;
+  min-width: 0;
+}
+
+.mentorship-number {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #ef6294;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.mentorship-item h4 {
+  font-size: 18px;
+  color: #6253b2;
+  margin-bottom: 12px;
+}
+
+.mentorship-item p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #625b71;
+}
+
+.mentorship-item p + p {
+  margin-top: 12px;
+}
+
+/* Closing statement */
+
+.mentorship-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fcebf2;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.mentorship-bottom-icon {
+  color: #ef6294;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.mentorship-bottom p {
+  margin: 0;
+  color: #625b71;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 768px) {
+
+  .mentorship-section {
+    padding: 55px 0;
+  }
+
+  .mentorship-card {
+    padding: 24px;
+  }
+
+  .mentorship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mentorship-intro h3 {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .mentorship-card {
+    padding: 20px;
+  }
+
+  .mentorship-top {
+    align-items: flex-start;
+  }
+
+  .mentorship-logo {
+    gap: 12px;
+  }
+
+  .mentorship-logo img {
+    width: 65px;
+    height: 50px;
+  }
+
+  .mentorship-logo strong {
+    font-size: 14px;
+  }
+
+  .mentorship-item {
+    padding: 20px;
+  }
+
+  .mentorship-item h4 {
+    font-size: 16px;
+  }
+
+  .mentorship-bottom {
+    padding: 18px;
+  }
+
+}
