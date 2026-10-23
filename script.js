@@ -531,8 +531,7 @@ document.addEventListener('keydown', ev => {
   if (ev.key === 'Escape' && !$('#project-backdrop').hidden) closeProject();
 });
 
-const projectGrid = $('#projects-grid');
-
+const projectGrid = $('#projects-grid') || document.createElement('div');
 projects.forEach(project => {
   const article = e('article', 'project-card');
   article.style.setProperty('--accent', project.color);
