@@ -1254,3 +1254,88 @@ h2 {
 }
 
 
+/* ========================================
+   MOBILE FIXES — HERO & WORK EXPERIENCE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+  /* 1. Fix portrait covering the text */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  /* Keep introduction ABOVE the picture */
+  .hero > div:first-child {
+    order: 1;
+    width: 100%;
+  }
+
+  .portrait-wrap {
+    order: 2;
+    position: relative;
+    width: min(100%, 420px);
+    height: 350px;
+    margin: 0 auto;
+  }
+
+  .portrait-wrap > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Keep floating badges within the picture */
+  .floating.first {
+    right: 10px;
+    top: 15px;
+  }
+
+  .floating.second {
+    left: 10px;
+    bottom: 15px;
+  }
+
+  /* 2. Stack work experiences vertically */
+  .selector-list {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    width: 100%;
+    gap: 12px;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+  }
+
+  .select-item {
+    width: 100%;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .master {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+  .portrait-wrap {
+    height: 300px;
+  }
+
+  .hero {
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+}
+
